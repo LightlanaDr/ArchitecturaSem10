@@ -23,10 +23,10 @@ async def get_by_id(client_id: int):
 @router.post("/clients/", response_model=Client)
 async def create(client: ClientIn):
     result = clients.insert().values(document=client.document,
-                                    surName=client.surName,
-                                    firstName=client.firstName,
-                                    patronymic=client.patronymic,
-                                    birthday=client.birthday)
+                                     surName=client.surName,
+                                     firstName=client.firstName,
+                                     patronymic=client.patronymic,
+                                     birthday=client.birthday)
     last_record_id = await database.execute(result)
     return {**client.model_dump(), "id": last_record_id}
 
