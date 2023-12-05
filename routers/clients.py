@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from fastapi import APIRouter, HTTPException
 from db import clients, database
 from models import Client, ClientIn
@@ -22,13 +24,17 @@ async def get_by_id(client_id: int):
 
 @router.post("/clients/", response_model=Client)
 async def create(client: ClientIn):
-    result = clients.insert().values(document=client.document,
-                                     surName=client.surName,
-                                     firstName=client.firstName,
-                                     patronymic=client.patronymic,
-                                     birthday=client.birthday)
-    last_record_id = await database.execute(result)
-    return {**client.model_dump(), "id": last_record_id}
+    now = datetime.now().date().year
+    if now - client.birthday.year > 18:
+        result = clients.insert().values(document=client.document,
+                                         surName=client.surName,
+                                         firstName=client.firstName,
+                                         patronymic=client.patronymic,
+                                         birthday=client.birthday)
+        last_record_id = await database.execute(result)
+        return {**client.model_dump(), "id": last_record_id}
+    else:
+        raise HTTPException(status_code=404, detail='Возраст не может быть меньше 18 лет')
 
 
 @router.put("/clients/{client_id}", response_model=Client)
