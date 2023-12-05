@@ -14,7 +14,7 @@
 
 # [Ссылка на код](https://github.com/LightlanaDr/ArchitecturaSem10/tree/f1e41f174480a5abbf529e4d6b232027b1e9f595/cliet_console)
 
-<image src="img.png" alt="Текст с описанием картинки">
+<image src="images/img.png" alt="Текст с описанием картинки">
 
 
 ## Урок 12. Принципы тестирования приложений
@@ -24,4 +24,4 @@
 
 # [Ссылка на код](https://github.com/LightlanaDr/ArchitecturaSem10/tree/00c8eeff36f68825a27b55af2e8fddc6cee2467f/tests)
 
-<image src="img_1.png" alt="Текст с описанием картинки">
+<image src="images/img_1.png" alt="Текст с описанием картинки">
