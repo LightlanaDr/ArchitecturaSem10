@@ -22,6 +22,6 @@
 Поработать с тестированием контроллеров нашего WEB-сервиса, добавить проект с автотестами (Unit-тесты).
 Добавить несколько тестов для методов добавления/удаления/редактирования объектов системы по примеру с нашего семинара.
 
-# [Ссылка на код](https://github.com/LightlanaDr/ArchitecturaSem10/tree/f1e41f174480a5abbf529e4d6b232027b1e9f595/cliet_console)
+# [Ссылка на код](https://github.com/LightlanaDr/ArchitecturaSem10/tree/00c8eeff36f68825a27b55af2e8fddc6cee2467f/tests)
 
 <image src="img_1.png" alt="Текст с описанием картинки">
